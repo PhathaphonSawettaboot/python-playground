@@ -1,3 +1,2 @@
-text = "spaces   "
-stripped_text = text.strip()
-print(stripped_text)  # Output: "spaces"
+for i in range(5):
+    print(i)
