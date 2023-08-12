@@ -1,4 +1,5 @@
-def function_name(parameters):
-    # Function body
-    # Code to be executed
-    return result
+def greet(name):
+    return "Hello, " + name + "!"
+
+message = greet("La-la")
+print(message)
