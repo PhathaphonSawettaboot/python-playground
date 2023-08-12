@@ -1,11 +1,7 @@
-# Define the list of fruits
-fruits = ['apple', 'banana', 'orange', 'grape']
+names = ["Alice", "Bob", "Charlie"]
+scores = [85,92,78]
 
-# Unpack the first three elements of the list
-first, second, third, forth = fruits
+zipped = zip(names,scores)
 
-# Print the values of the unpacked variables
-print("First fruit:", first)
-print("Second fruit:", second)
-print("Third fruit:", third)
-print("Forth fruit:", forth)
+for name, score in zipped:
+    print(f"{name}: {score}")
