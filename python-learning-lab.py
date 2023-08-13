@@ -1,7 +1,26 @@
-names = ["Alice", "Bob", "Charlie"]
-scores = [85,92,78]
+student = {
+    "name" : "John",
+    "age" : 25,
+    "major" : "Computer Science"
+}
 
-zipped = zip(names,scores)
+print(student["name"])
+print(student["age"])
 
-for name, score in zipped:
-    print(f"{name}: {score}")
+student["age"] = 26
+print(student["age"])
+
+student["gpa"] = 3.5
+del student["major"]
+print(student)
+
+print("gpa" in student)
+print("major" in student)
+
+keys = student.keys()
+values = student.values()
+print(keys)
+print(values)
+
+for key, value in student.items():
+    print(key, ":" , value)
