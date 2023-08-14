@@ -1,3 +1,8 @@
+"""
+cd ~/Documents
+python3 bank_program.py
+"""
+
 class BankAccount:
     def __init__(self, account_number, balance):
         self.account_number = account_number
@@ -10,7 +15,7 @@ class BankAccount:
     def withdraw(self, amount):
         if self.balance >= amount:
             self.balance = self.balance - amount
-            print(f"Deposit {amount} units. New balance: {self.balance}")
+            print(f"Withdraw {amount} units. New balance: {self.balance}")
         else:
             print("Insufficient funds.")
     
@@ -40,4 +45,14 @@ while True:
             account1.transfer(account2, amount)
         else:
             print("Recipient account not found.")
-             
+    elif choice == 2:
+        amount = float(input("Enter the amount to deposit: "))
+        account1.deposit(amount)
+    elif choice == 3:
+        amount = float(input("Enter the amount to withdraw: "))
+        account1.withdraw(amount)
+    elif choice == 4:
+        print("Existing the program.")
+        break
+    else:
+        print("Invalide choice. Please select a valid option.")
